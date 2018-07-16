@@ -1,0 +1,19 @@
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let slide of slideData?.Carousel; let i = index">
+    <img src="https://picsum.photos/1920/500?image={{i + 10}}" alt="Random slide">
+    <div class="carousel-caption">
+      <h3>{{slide}}</h3>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="container addslide">
+  <div class="row">
+    <div class="col-8 col-sm-8 col-md-8">
+        <input type="text" class="form-control" id="randomSlide" placeholder="Add Random Slide" #slide>
+    </div>
+    <div class="col-4 col-sm-4 col-md-4">
+        <button class="btn btn-primary" (click)="addSlide(slide)">Add</button>
+    </div>
+  </div>
+</div>
